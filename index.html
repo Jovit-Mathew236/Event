@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Asthra Registration</title>
+</head>
+
+<body>
+    <div class="logo">
+        <div>
+            <img src="logo.png" alt="">
+        </div>
+    </div>
+    <div class="form">
+        <div>
+            <h1>Registration</h1>
+            <form name="google-sheet" method="post" autocomplete="off">
+                <div style="display: flex;justify-content: space-around;flex-wrap: wrap;">
+                    <div>
+                        <div class="form-field">
+                            <label for="name">Name :</label><br>
+                            <input type="text" name="Name" placeholder="Your Name" required><br>
+                        </div>
+                        <div class="form-field"><label for="email">Email : </label><br>
+                            <input type="email" name="Email" id="email" placeholder="youremail@gmail.com" required><br>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-field">
+                            <label for="semster">Phone No.</label><br>
+                            <input type="number" name="Ph No." placeholder="Semster" required><br>
+                        </div>
+                        <div class="form-field"><label for="item">Item :</label><br>
+                            <input type="checkbox" name="Item" placeholder="Item..." required><br>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-field"><label for="college">College : </label><br>
+                            <input type="text" name="College" placeholder="College..." required><br>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" value="submit" id="submit">
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwpkLH0tZ6ZiUTXNtCZsnCG75WxadZv-_OKoSoqKYtiMyCQsmtyYUMZ3y0tTYftBHyB/exec'
+        const form = document.forms['google-sheet']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("You have successfully submitted."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
