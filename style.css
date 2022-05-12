@@ -4,7 +4,9 @@
     padding: 0%;
     font-family: 'Podkova', serif;;
 }
-
+/* body{
+    background-image: url("https://i.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.webp");
+} */
 .logo {
     width: 100vw;
 }
@@ -20,9 +22,10 @@
 }
 
 .form {
-    margin: 1vh 15vw;
+    margin: 5vh 15vw;
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
-    border-radius: 20px 20px 5px 5px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
 }
 
 .form h1 {
