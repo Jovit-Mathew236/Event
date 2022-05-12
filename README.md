@@ -1,1 +1,1 @@
-HOST LINK : https://jovit-mathew236.github.io/ASTHRA/
+HOST LINK : https://jovit-mathew236.github.io/Event/
