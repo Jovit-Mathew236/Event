@@ -71,7 +71,7 @@ form {
         font-size: calc(1em + 2vw);
     }
     .logo div img {
-        height: calc(95px + 30vw);
+        height: calc(15px + 30vw);
     }
     .form {
         margin: 1vh 4vw;
